@@ -89,3 +89,10 @@ resource "aws_instance" "test" {
   subnet_id              = aws_subnet.subnet_a.id
   vpc_security_group_ids = [aws_security_group.sg.id]
 }
+
+resource "aws_instance" "test_b" {
+  ami                    = "ami-065ab11fbd3d0323d"
+  instance_type          = "t2.micro"
+  subnet_id              = aws_subnet.subnet_b.id
+  vpc_security_group_ids = [aws_security_group.sg.id]
+}
